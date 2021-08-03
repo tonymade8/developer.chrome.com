@@ -51,7 +51,7 @@
     "concurrently": "^5.2.0",
     "escape-string-regexp": "^4.0.0",
     "express": "^4.17.1",
-    "glob": "^7.1.6",
+    "glob": "^7.1.7",
     "gorko": "^0.2.1",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
@@ -68,7 +68,8 @@
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
     "unistore": "^3.5.2",
-    "webdev-infra": "^1.0.23"
+    "webdev-infra": "^1.0.23",
+    "yaml-front-matter": "^4.1.1"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
