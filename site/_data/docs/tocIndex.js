@@ -33,9 +33,13 @@ const tocIndex = {};
 const all = glob.sync('*/toc.y{a,}ml', {cwd: __dirname});
 
 for (const result of all) {
-  const data = yaml.safeLoad(fs.readFileSync(path.join(__dirname, result)));
+  const data = yaml.load(
+    fs.readFileSync(path.join(__dirname, result), 'utf-8')
+  );
   const projectKey = path.dirname(result);
-  tocIndex[projectKey] = buildProjectIndex(data);
+  tocIndex[projectKey] = buildProjectIndex(
+    /** @type Section[] */ (/** @type TODO */ data)
+  );
 }
 
 module.exports = tocIndex;
